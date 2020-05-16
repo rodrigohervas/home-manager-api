@@ -18,7 +18,7 @@ after('disconnect from the test db', () => {
     db.destroy()
 })
 
-describe.skip('POST /api/users/auth', () => {
+describe('POST /api/users/auth', () => {
         
     beforeEach('insert test data for POST Login tests', () => {
         return db
@@ -49,7 +49,7 @@ describe.skip('POST /api/users/auth', () => {
     })
 })
 
-describe.skip('POST /api/users', () => {
+describe('POST /api/users', () => {
     
     it('POST /api/users/ creates a user, responding with 201 and the new user', () => {
         const user = {
@@ -72,7 +72,7 @@ describe.skip('POST /api/users', () => {
     })
 })
 
-describe.skip('PUT /api/users', () => {
+describe('PUT /api/users', () => {
     
     beforeEach('insert test users', () => {
         return db
@@ -101,7 +101,7 @@ describe.skip('PUT /api/users', () => {
     })
 })
 
-describe.skip('PATCH /api/users', () => {
+describe('PATCH /api/users', () => {
         
     beforeEach('insert test users', () => {
         return db
@@ -130,7 +130,7 @@ describe.skip('PATCH /api/users', () => {
     })
 })
 
-describe.skip('DELETE /api/users', () => {
+describe('DELETE /api/users', () => {
         
     beforeEach('insert test users', () => {
         return db

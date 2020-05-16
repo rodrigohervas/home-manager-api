@@ -14,6 +14,6 @@ module.exports ={
             {id: 11, user_id: 1, type_id: 1, amount: '150.00', name: 'Monthly Water Utility Monthly Water Utility', description: 'water expense. It\'s a periodic expense for utilities.', date: '04/01/2020'}, 
             {id: 12, user_id: 1, type_id: 3, amount: '160.00', name: 'Monthly Electric Utility Expense', description: 'electric expense. It\'s a periodic expense for utilities.', date: '06/04/2020'}, 
             {id: 13, user_id: 1, type_id: 1, amount: '125.00', name: 'Monthly Water Utility Monthly Water Utility', description: 'water expense. It\'s a periodic expense for utilities.', date: '06/01/2020'}, 
-        ]
+        ];
     }
-}
+};

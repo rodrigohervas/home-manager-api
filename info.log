@@ -127,3 +127,49 @@
 {"message":"error deleting service provider","loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"Cannot read property 'address_id' of undefined","level":"error"}
 {"message":"error deleting service provider","loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"serviceProviderResult is not defined","level":"error"}
 {"message":"error deleting service provider","status":404,"loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"The service provider couldn't be deleted","level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The service provider doesn't exist at serviceProviders.service.getByIdJoin","level":"error"}
+{"message":"The service provider doesn't exist","status":404,"level":"error"}
+{"message":"The service provider doesn't exist at serviceProviders.service.getByIdJoin","level":"error"}
+{"message":"The service provider doesn't exist","status":404,"level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at serviceProviders.service.postAsync.creatingAddress","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"The service provider doesn't exist at serviceProviders.service.getByIdJoin","level":"error"}
+{"message":"The service provider doesn't exist","status":404,"level":"error"}
+{"message":"The service provider doesn't exist at serviceProviders.service.getByIdJoin","level":"error"}
+{"message":"The service provider doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at addresses.service.post","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at addresses.service.post","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at addresses.service.post","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at addresses.service.post","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at addresses.service.post","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"The address doesn't exist at addresses.service.getById","level":"error"}
+{"message":"The address doesn't exist","status":404,"level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at addresses.service.post","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at addresses.service.post","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\" at addresses.service.post","level":"error"}
+{"message":"insert into \"addresses\" (\"city\", \"state\", \"street\", \"zipcode\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"addresses_pkey\"","level":"error"}
+{"message":"The address doesn't exist at addresses.service.getById","level":"error"}
+{"message":"The address doesn't exist","status":404,"level":"error"}
+{"message":"The address doesn't exist at addresses.service.getById","level":"error"}
+{"message":"The address doesn't exist","status":404,"level":"error"}
+{"message":"The service provider doesn't exist at serviceProviders.service.getByIdJoin","level":"error"}
+{"message":"The service provider doesn't exist","status":404,"level":"error"}
+{"message":"The address doesn't exist at addresses.service.getById","level":"error"}
+{"message":"The address doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The service provider doesn't exist at serviceProviders.service.getByIdJoin","level":"error"}
+{"message":"The service provider doesn't exist","status":404,"level":"error"}

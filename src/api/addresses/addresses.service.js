@@ -82,6 +82,7 @@ const AddressesService = {
                     .where({ id: id })
                     .then( addresses => {
                         const address = addresses[0];
+                        
                         if(!address) {
                             throw ( {message: `The address doesn't exist`, status: 404} );
                         }
@@ -128,6 +129,7 @@ const AddressesService = {
                 .returning('*')
                 .then(addresses => {
                     const address = addresses[0];
+                    
                     res.status(201).json(sanitizeAddress(address));
                 })
                 .catch(error => {

@@ -17,7 +17,7 @@ addressesRouter
 addressesRouter
         .route('/:id')
         .all(AddressesService.All)
-        .get(AddressesService.getById)
+        .post(AddressesService.getById)
         .put(AddressesService.updateById)
         .delete(AddressesService.deleteById)
 

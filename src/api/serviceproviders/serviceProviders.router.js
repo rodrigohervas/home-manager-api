@@ -10,14 +10,14 @@ const serviceProvidersRouter = express.Router();
 //regular route
 serviceProvidersRouter
         .route('/')
-        .post(ServiceProvidersService.postAsync)
+        .post(ServiceProvidersService.postAsync) //creates a service provider
 
 
 //route for serviceproviders/:id
 serviceProvidersRouter
         .route('/:id')
         .all(ServiceProvidersService.All)
-        .get(ServiceProvidersService.getByIdJoin) //get one service provider by an id and a user_id
+        .post(ServiceProvidersService.getByIdJoin) //gets a service provider for the serviceProviders id provided
         .put(ServiceProvidersService.updateByIdAsync) //update a service provider
         .delete(ServiceProvidersService.deleteByIdAsync) //delete a service provider
 
@@ -26,7 +26,7 @@ serviceProvidersRouter
 serviceProvidersRouter
         .route('/all/:user_id')
         .all(ServiceProvidersService.All)
-        .post(ServiceProvidersService.getAllByUserIdJoin) //getAll setvice providers for a user_id
+        .post(ServiceProvidersService.getAllByUserIdJoin) //gets All service providers for a user_id
 
 
 module.exports = serviceProvidersRouter;

@@ -45,7 +45,7 @@ app.use('/api/serviceproviders', serviceProvidersRouter);
 
 
 //addresses endpoint
-app.use('api/addresses', addressesRouter);
+app.use('/api/addresses', addressesRouter);
 
 
 app.use(errorHandler)

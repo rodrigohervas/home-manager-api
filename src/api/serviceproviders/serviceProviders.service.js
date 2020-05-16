@@ -219,6 +219,12 @@ const ServiceProvidersService = {
     },
 
 
+    /**
+     * getByIdJoin: gets a service provider for the serviceProviders id provided
+     * @param {object} req 
+     * @param {object} res 
+     * @param {function} next 
+     */
     getByIdJoin(req, res, next) {
         try {
             const { id } = req.params;
