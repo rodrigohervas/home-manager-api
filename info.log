@@ -1,0 +1,129 @@
+{"message":"error getting user","loc":"at users.service.authenticateUser","internalMessage":"next is not defined","level":"error"}
+{"message":"password is mandatory","status":400,"level":"error"}
+{"message":"error getting user","loc":"at users.service.authenticateUser","internalMessage":"next is not defined","level":"error"}
+{"message":"error getting user","loc":"at users.service.authenticateUser","internalMessage":"next is not defined","level":"error"}
+{"message":"error getting user","loc":"at users.service.authenticateUser","internalMessage":"next is not defined","level":"error"}
+{"message":"error getting user","status":400,"loc":"at users.service.authenticateUser","internalMessage":"password is mandatory","level":"error"}
+{"message":"error getting user","status":400,"loc":"at users.service.authenticateUser","internalMessage":"password is mandatory","level":"error"}
+{"message":"error getting user","status":400,"loc":"at users.service.authenticateUser","internalMessage":"password is mandatory","level":"error"}
+{"message":"password is mandatory","status":400,"level":"error"}
+{"message":"username is mandatory","status":400,"level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [username] query: select * from \"users\" where \"username\" = ? limit ? at users.service.authenticateUser","level":"error"}
+{"message":"User doesn't exist","status":404,"level":"error"}
+{"message":"User doesn't exist","status":404,"level":"error"}
+{"message":"User doesn't exist","status":404,"level":"error"}
+{"message":"User ERRRRRRRR doesn't exist","status":404,"level":"error"}
+{"message":"User ERRRRRRRR doesn't exist","status":404,"level":"error"}
+{"message":"User ERRRRRRRR doesn't exist","status":404,"level":"error"}
+{"message":"User ERRRRRRRR doesn't exist","status":404,"level":"error"}
+{"message":"password is invalid","status":404,"level":"error"}
+{"message":"password is invalid","status":404,"level":"error"}
+{"message":"User doesn't exist at users.service.deleteByUsername","level":"error"}
+{"message":"User doesn't exist","status":404,"level":"error"}
+{"message":"The user id is mandatory","status":404,"level":"error"}
+{"message":"select * from \"expenses\" where \"id\" = $1 and \"user_id\" = $2 - invalid input syntax for integer: \"\" at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"insert into \"expenses\" (\"amount\", \"date\", \"description\", \"name\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"expenses_pkey\" at expenses.service.post","level":"error"}
+{"message":"insert into \"expenses\" (\"amount\", \"date\", \"description\", \"name\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"expenses_pkey\"","level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"insert into \"expenses\" (\"amount\", \"date\", \"description\", \"name\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"expenses_pkey\" at expenses.service.post","level":"error"}
+{"message":"insert into \"expenses\" (\"amount\", \"date\", \"description\", \"name\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"expenses_pkey\"","level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"insert into \"expenses\" (\"amount\", \"date\", \"description\", \"name\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"expenses_pkey\" at expenses.service.post","level":"error"}
+{"message":"insert into \"expenses\" (\"amount\", \"date\", \"description\", \"name\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"expenses_pkey\"","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"expenses\" where \"id\" = ? and \"user_id\" = ? at expenses.service.getById","level":"error"}
+{"message":"The user id is mandatory","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"insert into \"expenses\" (\"amount\", \"date\", \"description\", \"name\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"expenses_pkey\" at expenses.service.post","level":"error"}
+{"message":"insert into \"expenses\" (\"amount\", \"date\", \"description\", \"name\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"expenses_pkey\"","level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"The expense doesn't exist at expenses.service.getById","level":"error"}
+{"message":"The expense doesn't exist","status":404,"level":"error"}
+{"message":"select * from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"id\" = $1 - column reference \"id\" is ambiguous at serviceProviders.service.getById","level":"error"}
+{"message":"select * from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"id\" = $1 - column reference \"id\" is ambiguous","level":"error"}
+{"message":"select * from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"serviceprovider\".\"id\" = $1 - missing FROM-clause entry for table \"serviceprovider\" at serviceProviders.service.getById","level":"error"}
+{"message":"select * from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"serviceprovider\".\"id\" = $1 - missing FROM-clause entry for table \"serviceprovider\"","level":"error"}
+{"message":"select * from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"serviceprovider\".\"id\" = $1 - missing FROM-clause entry for table \"serviceprovider\" at serviceProviders.service.getById","level":"error"}
+{"message":"select * from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"serviceprovider\".\"id\" = $1 - missing FROM-clause entry for table \"serviceprovider\"","level":"error"}
+{"message":"select * from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"serviceprovider\".\"id\" = $1 - missing FROM-clause entry for table \"serviceprovider\" at serviceProviders.service.getById","level":"error"}
+{"message":"select * from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"serviceprovider\".\"id\" = $1 - missing FROM-clause entry for table \"serviceprovider\"","level":"error"}
+{"message":"select \"serviceproviders\".\"*, addresses\".* from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"serviceproviders\".\"id\" = $1 - missing FROM-clause entry for table \"*, addresses\" at serviceProviders.service.getById","level":"error"}
+{"message":"select \"serviceproviders\".\"*, addresses\".* from \"serviceproviders\" inner join \"addresses\" on \"serviceproviders\".\"address_id\" = \"addresses\".\"id\" where \"serviceproviders\".\"id\" = $1 - missing FROM-clause entry for table \"*, addresses\"","level":"error"}
+{"message":"error getting service providers","loc":"at serviceProviders.service.getById","internalMessage":"user_id is not defined","level":"error"}
+{"message":"error getting service providers","loc":"at serviceProviders.service.getById","internalMessage":"user_id is not defined","level":"error"}
+{"message":"select * from \"serviceproviders sp\" inner join \"addresses a\" on \"sp\".\"address_id\" = \"a\".\"id\" where \"sp\".\"id\" = $1 - relation \"serviceproviders sp\" does not exist at serviceProviders.service.getById","level":"error"}
+{"message":"select * from \"serviceproviders sp\" inner join \"addresses a\" on \"sp\".\"address_id\" = \"a\".\"id\" where \"sp\".\"id\" = $1 - relation \"serviceproviders sp\" does not exist","level":"error"}
+{"message":"select \"serviceproviders\".*, \"addresses\".* from \"serviceproviders sp\" inner join \"addresses a\" on \"sp\".\"address_id\" = \"a\".\"id\" where \"sp\".\"id\" = $1 - relation \"serviceproviders sp\" does not exist at serviceProviders.service.getById","level":"error"}
+{"message":"select \"serviceproviders\".*, \"addresses\".* from \"serviceproviders sp\" inner join \"addresses a\" on \"sp\".\"address_id\" = \"a\".\"id\" where \"sp\".\"id\" = $1 - relation \"serviceproviders sp\" does not exist","level":"error"}
+{"message":"address is not defined at serviceProviders.service.getById","level":"error"}
+{"message":"address is not defined","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6, $7) returning * - column \"address\" of relation \"serviceproviders\" does not exist at serviceProviders.service.post","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6, $7) returning * - column \"address\" of relation \"serviceproviders\" does not exist","level":"error"}
+{"message":"error creating service providers","loc":"at serviceProviders.service.postAsync","internalMessage":"Cannot access 'serviceProvider' before initialization","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6, $7) returning * - column \"address\" of relation \"serviceproviders\" does not exist at serviceProviders.service.postAsync.creatingServiceProvider","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values ($1, $2, $3, $4, $5, $6, $7) returning * - column \"address\" of relation \"serviceproviders\" does not exist","level":"error"}
+{"message":"error creating service providers","loc":"at serviceProviders.service.postAsync","internalMessage":"Cannot read property 'street' of undefined","level":"error"}
+{"message":"error creating service providers","status":400,"loc":"at serviceProviders.service.postAsync","internalMessage":"address_id is mandatory","level":"error"}
+{"message":"error creating service providers","status":400,"loc":"at serviceProviders.service.postAsync","internalMessage":"address_id is mandatory","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address_id\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values (DEFAULT, $1, $2, $3, $4, $5, $6) returning * - null value in column \"address_id\" violates not-null constraint at serviceProviders.service.postAsync.creatingServiceProvider","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address_id\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values (DEFAULT, $1, $2, $3, $4, $5, $6) returning * - null value in column \"address_id\" violates not-null constraint","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address_id\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values (DEFAULT, $1, $2, $3, $4, $5, $6) returning * - null value in column \"address_id\" violates not-null constraint at serviceProviders.service.postAsync.creatingServiceProvider","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address_id\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values (DEFAULT, $1, $2, $3, $4, $5, $6) returning * - null value in column \"address_id\" violates not-null constraint","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address_id\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values (DEFAULT, $1, $2, $3, $4, $5, $6) returning * - null value in column \"address_id\" violates not-null constraint at serviceProviders.service.postAsync.creatingServiceProvider","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address_id\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values (DEFAULT, $1, $2, $3, $4, $5, $6) returning * - null value in column \"address_id\" violates not-null constraint","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address_id\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values (DEFAULT, $1, $2, $3, $4, $5, $6) returning * - null value in column \"address_id\" violates not-null constraint at serviceProviders.service.postAsync.creatingServiceProvider","level":"error"}
+{"message":"insert into \"serviceproviders\" (\"address_id\", \"description\", \"email\", \"name\", \"telephone\", \"type_id\", \"user_id\") values (DEFAULT, $1, $2, $3, $4, $5, $6) returning * - null value in column \"address_id\" violates not-null constraint","level":"error"}
+{"message":"error creating service providers","loc":"at serviceProviders.service.postAsync","internalMessage":"addressResult is not defined","level":"error"}
+{"message":"Undefined binding(s) detected when compiling UPDATE. Undefined column(s): [id] query: update \"serviceproviders\" set \"user_id\" = ?, \"type_id\" = ?, \"name\" = ?, \"description\" = ?, \"telephone\" = ?, \"email\" = ? where \"id\" = ? and \"user_id\" = ? returning * at serviceProviders.service.postAsync.updatingServiceProvider","level":"error"}
+{"message":"Undefined binding(s) detected when compiling UPDATE. Undefined column(s): [id] query: update \"serviceproviders\" set \"user_id\" = ?, \"type_id\" = ?, \"name\" = ?, \"description\" = ?, \"telephone\" = ?, \"email\" = ? where \"id\" = ? and \"user_id\" = ? returning *","level":"error"}
+{"message":"The service provider doesn't exist at serviceProviders.service.getByIdJoin","level":"error"}
+{"message":"The service provider doesn't exist","status":404,"level":"error"}
+{"message":"error getting service providers","loc":"at serviceProviders.service.getAllByUserIdJoin","internalMessage":"id is not defined","level":"error"}
+{"message":"error getting service providers","loc":"at serviceProviders.service.getAllByUserIdJoin","internalMessage":"id is not defined","level":"error"}
+{"message":"user_id is mandatory","status":400,"level":"error"}
+{"message":"delete from \"addresses\" where \"address_id\" = $1 - column \"address_id\" does not exist at serviceProviders.service.deleteByIdAsync.deletingAddress","level":"error"}
+{"message":"delete from \"addresses\" where \"address_id\" = $1 - column \"address_id\" does not exist at serviceProviders.service.deleteByIdAsync.deletingAddress","level":"error"}
+{"message":"delete from \"addresses\" where \"address_id\" = $1 - column \"address_id\" does not exist","level":"error"}
+{"message":"delete from \"addresses\" where \"id\" = $1 - invalid input syntax for integer: \"{\"{\\\"address_id\\\":2}\"}\" at serviceProviders.service.deleteByIdAsync.deletingAddress","level":"error"}
+{"message":"delete from \"addresses\" where \"id\" = $1 - invalid input syntax for integer: \"{\"{\\\"address_id\\\":2}\"}\"","level":"error"}
+{"message":"error deleting service provider","loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"parseint is not defined","level":"error"}
+{"message":"delete from \"addresses\" where \"id\" = $1 - invalid input syntax for integer: \"NaN\" at serviceProviders.service.deleteByIdAsync.deletingAddress","level":"error"}
+{"message":"delete from \"addresses\" where \"id\" = $1 - invalid input syntax for integer: \"NaN\"","level":"error"}
+{"message":"delete from \"addresses\" where \"id\" = $1 - invalid input syntax for integer: \"{\"{\\\"address_id\\\":2}\"}\" at serviceProviders.service.deleteByIdAsync.deletingAddress","level":"error"}
+{"message":"delete from \"addresses\" where \"id\" = $1 - invalid input syntax for integer: \"{\"{\\\"address_id\\\":2}\"}\"","level":"error"}
+{"message":"delete from \"addresses\" where \"id\" = $1 - invalid input syntax for integer: \"{\"address_id\":2}\" at serviceProviders.service.deleteByIdAsync.deletingAddress","level":"error"}
+{"message":"delete from \"addresses\" where \"id\" = $1 - invalid input syntax for integer: \"{\"address_id\":2}\"","level":"error"}
+{"message":"error deleting service provider","status":404,"loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"The service provider couldn't be deleted","level":"error"}
+{"message":"error deleting service provider","status":404,"loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"The service provider couldn't be deleted","level":"error"}
+{"message":"error deleting service provider","loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"Cannot read property 'address_id' of undefined","level":"error"}
+{"message":"error deleting service provider","status":404,"loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"The service provider couldn't be deleted","level":"error"}
+{"message":"error deleting service provider","status":404,"loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"The service provider couldn't be deleted","level":"error"}
+{"message":"error deleting service provider","status":404,"loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"The service provider couldn't be deleted","level":"error"}
+{"message":"error deleting service provider","loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"Cannot read property 'address_id' of undefined","level":"error"}
+{"message":"error deleting service provider","loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"serviceProviderResult is not defined","level":"error"}
+{"message":"error deleting service provider","status":404,"loc":"at serviceProviders.service.deleteByIdAsync","internalMessage":"The service provider couldn't be deleted","level":"error"}
