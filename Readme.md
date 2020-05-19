@@ -30,6 +30,8 @@ Test API key: `6u4z8451-7ch3-1547-8e15-bf1419bf2315`
 If you clone this Git repository you'll want to store the API key in the .env file (more information on that below).
 
 
+***
+
 ### Endpoints:
 
 The API has the following endpoints: 
