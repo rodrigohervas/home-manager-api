@@ -17,7 +17,7 @@ const sanitizeExpense = (expense) => (
         amount: expense.amount, 
         name: xss(expense.name), 
         description: xss(expense.description), 
-        date: expense.date
+        date: expense.date.toLocaleDateString()
     }
 );
 

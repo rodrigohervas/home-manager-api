@@ -12,6 +12,7 @@ const usersRouter = require('./api/users/users.router');
 const expensesRouter = require('./api/expenses/expenses.router');
 const serviceProvidersRouter = require('./api/serviceproviders/serviceProviders.router');
 const addressesRouter = require('./api/addresses/addresses.router');
+const typesRouter = require('./api/types/types.router');
 
 const app = express()
 const morganOption = (NODE_ENV === 'production') ? 'tiny' : 'common'
@@ -46,6 +47,10 @@ app.use('/api/serviceproviders', serviceProvidersRouter);
 
 //addresses endpoint
 app.use('/api/addresses', addressesRouter);
+
+
+//types endpoint
+app.use('/api/types', typesRouter);
 
 
 app.use(errorHandler)

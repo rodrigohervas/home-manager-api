@@ -5,7 +5,7 @@ const AddressesService = require('./addresses.service');
  * Addresses Routing middleware
  */
 
-const addressesRouter = express.Router()
+const addressesRouter = express.Router();
 
 //regular route
 addressesRouter

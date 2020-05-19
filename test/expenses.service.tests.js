@@ -1,7 +1,7 @@
 const app = require('../src/app');
 const db = require('../src/knexContext');
 const { generateUsersTestData } = require('./users.tests.data');
-const { generateTypesTestData } = require('./types.test.data');
+const { generateTypesTestData } = require('./types.tests.data');
 const { generateExpensesTestData } = require('./expenses.tests.data');
 
 const testUsers = generateUsersTestData();
