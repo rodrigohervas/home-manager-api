@@ -17,7 +17,7 @@ typesRouter
 typesRouter
         .route('/:id')
         .all(TypesService.All)
-        .post(TypesService.getById) //get the type for the provided type id
+        .get(TypesService.getById) //get the type for the provided type id
         .put(TypesService.updateById)
         .delete(TypesService.deleteById)
 
