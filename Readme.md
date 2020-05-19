@@ -36,15 +36,15 @@ If you clone this Git repository you'll want to store the API key in the .env fi
 
 The API has the following endpoints: 
 
-* _users_: CRUD users for the app
+* `users`: CRUD users for the app
 
-* _expenses_: CRUD expenses for a user
+* `expenses`: CRUD expenses for a user
 
-* _service-providers_: CRUD service providers for a user
+* `service-providers`: CRUD service providers for a user
 
-* _addresses_: CRUD adresses for a service provider
+* `addresses`: CRUD adresses for a service provider
 
-* _types_: CRUD expense and service providers types
+* `types`: CRUD expense and service providers types
 
 
 ***
