@@ -17,7 +17,7 @@ Packages used: express, morgan, cors, dotenv, helmet, winston, xss, pg, postgreS
 
 ## Live Site
 
-[PENDING]()
+[Home manager API](https://homemanagerrh.herokuapp.com/)
 
 ## API Documentation:
 
@@ -38,193 +38,575 @@ The API has the following endpoints:
 
 * expenses: CRUD expenses for a user
 
-* service-providers: CRUD service provider requests for a user
+* service-providers: CRUD service providers for a user
+
+* addresses: CRUD adresses for a service provider
+
+* types: CRUD expense and service providers types
 
 
 ### users endpoint: 
 
-#### post => /api/users/login
+#### post => /api/users/auth
 
-Returns: a user object for the username and password
+Description: returns a user object for a provided username and password
 
-Requires: { username, password }
+Request params:
 
-* username: string
-* password: string
+| param name    | type     |
+| ------------- |:--------:|
+| username      | String   |
+| password      | String   |
+
+
+Response:
+
+A user object.
+
+| param name    | type     |
+| ------------- |:--------:|
+| id            | Number   |
+| username      | String   |
+| password      | String   |
+
 
 #### post => /api/users
 
-Requires: { username, password, role_id, company }
+Description: creates a user object
 
-Returns: the user object created
+Request params:
 
-* username: string
-* password: string
-* role_id: integer
-* company: string
+| param name    | type     |
+| ------------- |:--------:|
+| username      | String   |
+| password      | String   |
+
+
+Response:
+
+The user object created.
+
+| param name    | type     |
+| ------------- |:--------:|
+| id            | Number   |
+| username      | String   |
+| password      | String   |
+
 
 #### put => /api/users
 
-Returns: the user object updated
+Description: updates a user
 
-Requires: { username, password, role_id, company_id }
+Request params:
 
-* username: string
-* password: string
-* role_id: integer
-* company_id: integer
+| param name    | type     |
+| ------------- |:--------:|
+| username      | String   |
+| password      | String   |
+
+Response:
+
+The user object updated.
+
+| param name    | type     |
+| ------------- |:--------:|
+| id            | numeric  |
+| username      | String   |
+| password      | String   |
+
 
 #### delete => /api/users
 
-Returns: a string confirming the user is deleted
+Description: deletes a user
 
-Requires: {username, password}
+Request params:
 
-* username: string
-* password: string
+| param name    | type     |
+| ------------- |:--------:|
+| username      | String   |
+| password      | String   |
 
 
-### timeframes endpoint: 
+Response: a string confirming the user is deleted.
 
-#### get => /api/timeframes/:id
 
-Returns: a timeframe object for the timeframe id
+### expenses endpoint: 
 
-Requires: { id }
+#### post => /api/expenses/:user_id
 
-* id: integer
+Description: returns an array of expense objects for a provided user id
 
-#### post => /api/timeframes/
+Request params:
 
-Returns: the timeframe created
+| param name    | type     | param type   |
+| ------------- |:--------:| ------------:|
+| user_id       | Number   | querystring  |
 
-Requires: { date, starttime, finishtime, comments, user_id }
+Response:
 
-* date: date
-* starttime: datetime
-* finishtime: datetime
-* comments: string
-* user_id: int
+An array of expense objects.
 
-#### post => /api/timeframes/:id
+| param name  | type     |
+| ------------|:--------:|
+| id          | Number   |
+| type_id     | Number   |
+| amount      | Number   |
+| name        | String   |
+| description | String   |
+| date        | Date     |
+| user_id     | Number   |
 
-Returns: array of timeframes objects for the user id
 
-Requires: { id }
+#### get => /api/expenses/:id
 
-* id: integer
+Description: returns an expense object for a provided expense id
 
-#### put => /api/timeframes/:id
+Request params:
 
-Returns: the timeframe updated
+| param name    | type     | param type   |
+| ------------- |:--------:| ------------:|
+| id            | Number   | querystring  |
 
-Requires (querystring param): { id }
-Requires (body): { date, starttime, finishtime, comments, user_id } 
+Response:
 
-* id: integer
-* date: date
-* starttime: datetime
-* finishtime: datetime
-* comments: string
-* user_id: int
+An expense object.
 
-#### delete => /api/timeframes/:id
+| param name  | type     |
+| ------------|:--------:|
+| id          | Number   |
+| type_id     | Number   |
+| amount      | Number   |
+| name        | String   |
+| description | String   |
+| date        | Date     |
+| user_id     | Number   |
 
-Requires: { id }
 
-* id: integer
+#### post => /api/expenses/
 
-### ptos endpoint: 
+Description: creates an expense
 
-#### post => /api/ptos/:id
+Request params:
 
-Returns: list of ptos for the user id
+| param name  | type     | param type   |
+| ------------|:--------:| ------------:|
+| type_id     | Number   | body         |
+| amount      | Number   | body         |
+| name        | String   | body         |
+| description | String   | body         |
+| date        | Date     | body         |
+| user_id     | Number   | body         |
 
-Requires: { id }
+Response:
 
-* id: integer
+The expense object created.
 
-#### post => /api/ptos/
+| param name  | type     |
+| ------------|:--------:|
+| id          | Number   |
+| type_id     | Number   |
+| amount      | Number   |
+| name        | String   |
+| description | String   |
+| date        | Date     |
+| user_id     | Number   |
 
-Returns: the pto created
 
-Requires: { user_id, type, startdate, finishdate, comments  } 
+#### put => /api/expenses/:id
 
-* user_id: integer
-* type: integer
-* startdate: date
-* finishdate: date
-* comments: string
+Description: updates an expense
 
-#### get => /api/ptos/:id
+Request params: 
 
-Returns: a pto object for the id
+| param name  | type     | param type   |
+| ------------|:--------:| ------------:|
+| id          | Number   | querystring  |
+| type_id     | Number   | body         |
+| amount      | Number   | body         |
+| name        | String   | body         |
+| description | String   | body         |
+| date        | Date     | body         |
+| user_id     | Number   | body         |
 
-Requires: { id }
+Response:
 
-* id: integer
+The expense object updated.
 
-### put => /api/ptos/:id
+| param name  | type     |
+| ------------|:--------:|
+| id          | Number   |
+| type_id     | Number   |
+| amount      | Number   |
+| name        | String   |
+| description | String   |
+| date        | Date     |
+| user_id     | Number   |
 
-Returns: the pto updated
 
-Requires (querystring param): { id }
-Requires (body): { user_id, type, startdate, finishdate, comments  } 
+#### delete => /api/expenses/:id
 
-* user_id: integer
-* type: integer
-* startdate: date
-* finishdate: date
-* comments: string
+Description: deletes an expense
 
-#### delete => /api/ptos/:id
+Request params:
 
-Returns: an string confirming the pto deleted
+| param name  | type     | param type   |
+| ------------|:--------:| ------------:|
+| id          | Number   | querystring  |
+| user_id     | Number   | body         |
 
-Requires: { id }
 
-* id: integer 
+Response:
 
-### ptodays endpoint: 
+A string confirming that the expense was deleted.
 
-#### post => /api/ptodays/
 
-Returns: the ptodays object created
+### service providers endpoint: 
 
-Requires: { user_id, totaldays, useddays, availabledays  }
+#### post => /api/serviceproviders/all
 
-* user_id: integer
-* totaldays: integer
-* useddays: integer
-* availabledays: integer
+Description: returns an array of serviceprovider objects (and its addresses) for a provided user id
 
-#### get => /api/ptodays/:user_id
+Request params:
 
-Returns: an array of ptodays objects for the given user_id
+| param name    | type     | param type   |
+| ------------- |:--------:| ------------:|
+| user_id       | Number   | querystring  |
 
-Requires: {user_id} 
+Response:
 
-* user_id: integer
+An array of expense objects.
 
-#### put => /api/ptodays/:user_id
+| param name      | type    |
+| ----------------|:-------:|
+| id              | Number  |
+| user_id         | Number  |
+| type_id         | Number  |
+| name            | String  |
+| description     | String  |
+| telephone       | String  |
+| Email           | String  |
+| address.street  | String  |
+| address.city    | String  |
+| address.state   | String  |
+| address.zipcode | String  |
 
-Returns: the updated ptodays object
 
-Requires (querystring param): { user_id }
-Requires (body): totaldays, useddays, availabledays
+#### post => /api/serviceproviders/:id
 
-* user_id: integer
-* totaldays: integer
-* useddays: integer
-* availabledays: integer
+Description: returns a serviceprovider object (and its address) for a provided serviceprovider id
 
-#### delete => /api/ptodays/:user_id
+Request params:
 
-Returns: a string confirming the user has been deleted
+| param name    | type     | param type   |
+| ------------- |:--------:| ------------:|
+| id            | Number   | querystring  |
 
-Requires: {user_id} 
+Response:
 
-* user_id: integer
+An expense object.
+
+| param name      | type    |
+| ----------------|:-------:|
+| id              | Number  |
+| user_id         | Number  |
+| type_id         | Number  |
+| name            | String  |
+| description     | String  |
+| telephone       | String  |
+| Email           | String  |
+| address.street  | String  |
+| address.city    | String  |
+| address.state   | String  |
+| address.zipcode | String  |
+
+
+#### post => /api/serviceproviders/
+
+Description: creates a serviceprovider (and its address)
+
+Request params:
+
+| param name      | type    | param type   |
+| --------------- |:-------:| ------------:|
+| user_id         | Number  | body         |
+| type_id         | Number  | body         |
+| name            | String  | body         |
+| description     | String  | body         |
+| telephone       | String  | body         |
+| Email           | String  | body         |
+| address.street  | String  | body         |
+| address.city    | String  | body         |
+| address.state   | String  | body         |
+| address.zipcode | String  | body         |
+
+Response:
+
+The expense object created.
+
+| param name      | type    |
+| ----------------|:-------:|
+| id              | Number  |
+| user_id         | Number  |
+| type_id         | Number  |
+| name            | String  |
+| description     | String  |
+| telephone       | String  |
+| Email           | String  |
+| address.street  | String  |
+| address.city    | String  |
+| address.state   | String  |
+| address.zipcode | String  |
+
+
+### put => /api/serviceproviders/:id
+
+Description: updates a serviceprovider (and its address)
+
+Request params:
+
+| param name      | type    | param type   |
+| --------------- |:-------:| ------------:|
+| id              | Number  | querystring  |
+| user_id         | Number  | body         |
+| type_id         | Number  | body         |
+| name            | String  | body         |
+| description     | String  | body         |
+| telephone       | String  | body         |
+| Email           | String  | body         |
+| address.street  | String  | body         |
+| address.city    | String  | body         |
+| address.state   | String  | body         |
+| address.zipcode | String  | body         |
+
+Response:
+
+The expense object updated.
+
+| param name      | type    |
+| ----------------|:-------:|
+| id              | Number  |
+| user_id         | Number  |
+| type_id         | Number  |
+| name            | String  |
+| description     | String  |
+| telephone       | String  |
+| Email           | String  |
+| address.street  | String  |
+| address.city    | String  |
+| address.state   | String  |
+| address.zipcode | String  |
+
+
+#### delete => /api/serviceproviders/:id
+
+Description: deletes a serviceprovider (and its address)
+
+Request params:
+
+| param name      | type    | param type   |
+| --------------- |:-------:| ------------:|
+| id              | Number  | querystring  |
+| user_id         | Number  | body         |
+
+Response:
+
+A string confirming that the service provided was deleted.
+ 
+
+### addresses endpoint: 
+
+#### post => api/addresses/
+
+Description: creates an address
+
+Request params:
+
+| param name  | type    | param type   |
+| ----------- |:-------:| ------------:|
+| street      | String  | body         |
+| city        | String  | body         |
+| state       | String  | body         |
+| zipcode     | String  | body         |
+
+Response:
+
+The address object created.
+
+| param name  | type    |
+| ------------|:-------:|
+| id          | Number  |
+| street      | String  |
+| city        | String  |
+| state       | String  |
+| zipcode     | String  |
+
+#### post => /api/addresses/:id
+
+Description: returns an address object for a provided address id
+
+Request params:
+
+| param name  | type    | param type   |
+| ----------- |:-------:| ------------:|
+| id          | Number  | Querystring  |
+
+Response:
+
+An address object.
+
+| param name  | type    |
+| ------------|:-------:|
+| id          | Number  |
+| street      | String  |
+| city        | String  |
+| state       | String  |
+| zipcode     | String  |
+
+
+#### put => /api/addresses/:id
+
+Description: updates an address
+
+Request params:
+
+| param name  | type    | param type   |
+| ----------- |:-------:| ------------:|
+| id          | Number  | querystring  |
+| street      | String  | body         |
+| city        | String  | body         |
+| state       | String  | body         |
+| zipcode     | String  | body         |
+
+Response:
+
+The address object updated.
+
+| param name  | type    |
+| ------------|:-------:|
+| id          | Number  |
+| street      | String  |
+| city        | String  |
+| state       | String  |
+| zipcode     | String  |
+
+
+#### delete => /api/addresses/:id
+
+Description: deletes an address
+
+Request params:
+
+| param name  | type    | param type   |
+| ----------- |:-------:| ------------:|
+| id          | Number  | querystring  |
+
+Response:
+
+A string confirming that the address has been deleted.
+
+
+### types endpoint:
+
+#### post => api/types/all
+
+Description: returns an array of types
+
+Request params:
+
+None
+
+Response:
+
+An array of type objects.
+
+| param name  | type    |
+| ------------|:-------:|
+| id          | Number  |
+| name        | String  |
+| description | String  |
+
+
+#### get => /api/types/:id
+
+Description: return a type object for a provided type id
+
+Request params:
+
+| param name  | type    | param type   |
+| ----------- |:-------:| ------------:|
+| id          | Numeric | Querystring  |
+
+Response:
+
+A type object.
+
+| param name  | type    |
+| ------------|:-------:|
+| id          | Number  |
+| name        | String  |
+| description | String  |
+
+
+#### post => /api/types/
+
+Description: creates a type
+
+Request params:
+
+| param name  | type    | param type   |
+| ----------- |:-------:| ------------:|
+| name        | String  | body         |
+| description | String  | body         |
+
+
+Response:
+
+The type object created.
+
+| param name  | type    |
+| ------------|:-------:|
+| id          | Number  |
+| name        | String  |
+| description | String  |
+
+
+#### put => /api/types/:id
+
+Description: updates a type
+
+Request params:
+
+| param name  | type    | param type   |
+| ----------- |:-------:| ------------:|
+| id          | Number  | querystring  |
+| name        | String  | body         |
+| description | String  | body         |
+
+
+Response:
+
+The type object updated.
+
+| param name  | type    |
+| ------------|:-------:|
+| id          | Number  |
+| name        | String  |
+| description | String  |
+
+
+#### delete => /api/types/:id
+
+Description: deletes a type
+
+Request params:
+
+| param name  | type    | param type   |
+| ----------- |:-------:| ------------:|
+| id          | Number | querystring  |
+
+Response:
+
+A string confirming that the type object has been deleted.
 
 
 ## Set up
