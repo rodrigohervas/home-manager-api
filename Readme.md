@@ -25,7 +25,7 @@ Packages used: express, morgan, cors, dotenv, helmet, winston, xss, pg, postgreS
 
 All API requests must be made using an API Key. For testing purposes the following API key can be used:
 
-Test API key: 6u4z8451-7ch3-1547-8e15-bf1419bf2315
+Test API key: `6u4z8451-7ch3-1547-8e15-bf1419bf2315`
 
 If you clone this Git repository you'll want to store the API key in the .env file (more information on that below).
 
@@ -34,32 +34,34 @@ If you clone this Git repository you'll want to store the API key in the .env fi
 
 The API has the following endpoints: 
 
-* users: CRUD users for the app
+* _users_: CRUD users for the app
 
-* expenses: CRUD expenses for a user
+* _expenses_: CRUD expenses for a user
 
-* service-providers: CRUD service providers for a user
+* _service-providers_: CRUD service providers for a user
 
-* addresses: CRUD adresses for a service provider
+* _addresses_: CRUD adresses for a service provider
 
-* types: CRUD expense and service providers types
+* _types_: CRUD expense and service providers types
 
+
+***
 
 ### users endpoint: 
 
 #### post => /api/users/auth
 
-Description: returns a user object for a provided username and password
+* Description: returns a user object for a provided username and password
 
-Request params:
+* Request params:
 
-| param name    | type     |
-| ------------- |:--------:|
-| username      | String   |
-| password      | String   |
+| param name    | type     | param type   |
+| ------------- |:--------:| ------------:|
+| username      | String   | body         |
+| password      | String   | body         |
 
 
-Response:
+* Response:
 
 A user object.
 
@@ -72,17 +74,17 @@ A user object.
 
 #### post => /api/users
 
-Description: creates a user object
+* Description: creates a user object
 
-Request params:
+* Request params:
 
-| param name    | type     |
-| ------------- |:--------:|
-| username      | String   |
-| password      | String   |
+| param name    | type     | param type   |
+| ------------- |:--------:| ------------:|
+| username      | String   | body         |
+| password      | String   | body         |
 
 
-Response:
+* Response:
 
 The user object created.
 
@@ -95,16 +97,17 @@ The user object created.
 
 #### put => /api/users
 
-Description: updates a user
+* Description: updates a user's password
 
-Request params:
+* Request params:
 
-| param name    | type     |
-| ------------- |:--------:|
-| username      | String   |
-| password      | String   |
+| param name    | type     | param type   |
+| ------------- |:--------:| ------------:|
+| username      | String   | body         |
+| password      | String   | body         |
+| newPassword   | String   | body         |
 
-Response:
+* Response:
 
 The user object updated.
 
@@ -117,32 +120,33 @@ The user object updated.
 
 #### delete => /api/users
 
-Description: deletes a user
+* Description: deletes a user
 
-Request params:
+* Request params:
 
-| param name    | type     |
-| ------------- |:--------:|
-| username      | String   |
-| password      | String   |
+| param name    | type     | param type   |
+| ------------- |:--------:| ------------:|
+| username      | String   | body         |
+| password      | String   | body         |
 
 
-Response: a string confirming the user is deleted.
+* Response: a string confirming the user is deleted.
 
+***
 
 ### expenses endpoint: 
 
 #### post => /api/expenses/:user_id
 
-Description: returns an array of expense objects for a provided user id
+* Description: returns an array of expense objects for a provided user id
 
-Request params:
+* Request params:
 
 | param name    | type     | param type   |
 | ------------- |:--------:| ------------:|
 | user_id       | Number   | querystring  |
 
-Response:
+* Response:
 
 An array of expense objects.
 
@@ -159,15 +163,15 @@ An array of expense objects.
 
 #### get => /api/expenses/:id
 
-Description: returns an expense object for a provided expense id
+* Description: returns an expense object for a provided expense id
 
-Request params:
+* Request params:
 
 | param name    | type     | param type   |
 | ------------- |:--------:| ------------:|
 | id            | Number   | querystring  |
 
-Response:
+* Response:
 
 An expense object.
 
@@ -184,9 +188,9 @@ An expense object.
 
 #### post => /api/expenses/
 
-Description: creates an expense
+* Description: creates an expense
 
-Request params:
+* Request params:
 
 | param name  | type     | param type   |
 | ------------|:--------:| ------------:|
@@ -197,7 +201,7 @@ Request params:
 | date        | Date     | body         |
 | user_id     | Number   | body         |
 
-Response:
+* Response:
 
 The expense object created.
 
@@ -214,9 +218,9 @@ The expense object created.
 
 #### put => /api/expenses/:id
 
-Description: updates an expense
+* Description: updates an expense
 
-Request params: 
+* Request params: 
 
 | param name  | type     | param type   |
 | ------------|:--------:| ------------:|
@@ -228,7 +232,7 @@ Request params:
 | date        | Date     | body         |
 | user_id     | Number   | body         |
 
-Response:
+* Response:
 
 The expense object updated.
 
@@ -245,9 +249,9 @@ The expense object updated.
 
 #### delete => /api/expenses/:id
 
-Description: deletes an expense
+* Description: deletes an expense
 
-Request params:
+* Request params:
 
 | param name  | type     | param type   |
 | ------------|:--------:| ------------:|
@@ -255,24 +259,25 @@ Request params:
 | user_id     | Number   | body         |
 
 
-Response:
+* Response:
 
 A string confirming that the expense was deleted.
 
+***
 
 ### service providers endpoint: 
 
 #### post => /api/serviceproviders/all
 
-Description: returns an array of serviceprovider objects (and its addresses) for a provided user id
+* Description: returns an array of serviceprovider objects (and its addresses) for a provided user id
 
-Request params:
+* Request params:
 
 | param name    | type     | param type   |
 | ------------- |:--------:| ------------:|
 | user_id       | Number   | querystring  |
 
-Response:
+* Response:
 
 An array of expense objects.
 
@@ -293,15 +298,15 @@ An array of expense objects.
 
 #### post => /api/serviceproviders/:id
 
-Description: returns a serviceprovider object (and its address) for a provided serviceprovider id
+* Description: returns a serviceprovider object (and its address) for a provided serviceprovider id
 
-Request params:
+* Request params:
 
 | param name    | type     | param type   |
 | ------------- |:--------:| ------------:|
 | id            | Number   | querystring  |
 
-Response:
+* Response:
 
 An expense object.
 
@@ -322,9 +327,9 @@ An expense object.
 
 #### post => /api/serviceproviders/
 
-Description: creates a serviceprovider (and its address)
+* Description: creates a serviceprovider (and its address)
 
-Request params:
+* Request params:
 
 | param name      | type    | param type   |
 | --------------- |:-------:| ------------:|
@@ -339,7 +344,7 @@ Request params:
 | address.state   | String  | body         |
 | address.zipcode | String  | body         |
 
-Response:
+* Response:
 
 The expense object created.
 
@@ -360,9 +365,9 @@ The expense object created.
 
 ### put => /api/serviceproviders/:id
 
-Description: updates a serviceprovider (and its address)
+* Description: updates a serviceprovider (and its address)
 
-Request params:
+* Request params:
 
 | param name      | type    | param type   |
 | --------------- |:-------:| ------------:|
@@ -378,9 +383,9 @@ Request params:
 | address.state   | String  | body         |
 | address.zipcode | String  | body         |
 
-Response:
+* Response:
 
-The expense object updated.
+* The expense object updated.
 
 | param name      | type    |
 | ----------------|:-------:|
@@ -399,27 +404,28 @@ The expense object updated.
 
 #### delete => /api/serviceproviders/:id
 
-Description: deletes a serviceprovider (and its address)
+* Description: deletes a serviceprovider (and its address)
 
-Request params:
+* Request params:
 
 | param name      | type    | param type   |
 | --------------- |:-------:| ------------:|
 | id              | Number  | querystring  |
 | user_id         | Number  | body         |
 
-Response:
+* Response:
 
 A string confirming that the service provided was deleted.
- 
+
+***
 
 ### addresses endpoint: 
 
 #### post => api/addresses/
 
-Description: creates an address
+* Description: creates an address
 
-Request params:
+* Request params:
 
 | param name  | type    | param type   |
 | ----------- |:-------:| ------------:|
@@ -428,7 +434,7 @@ Request params:
 | state       | String  | body         |
 | zipcode     | String  | body         |
 
-Response:
+* Response:
 
 The address object created.
 
@@ -442,15 +448,15 @@ The address object created.
 
 #### post => /api/addresses/:id
 
-Description: returns an address object for a provided address id
+* Description: returns an address object for a provided address id
 
-Request params:
+* Request params:
 
 | param name  | type    | param type   |
 | ----------- |:-------:| ------------:|
 | id          | Number  | Querystring  |
 
-Response:
+* Response:
 
 An address object.
 
@@ -465,9 +471,9 @@ An address object.
 
 #### put => /api/addresses/:id
 
-Description: updates an address
+* Description: updates an address
 
-Request params:
+* Request params:
 
 | param name  | type    | param type   |
 | ----------- |:-------:| ------------:|
@@ -477,7 +483,7 @@ Request params:
 | state       | String  | body         |
 | zipcode     | String  | body         |
 
-Response:
+* Response:
 
 The address object updated.
 
@@ -492,30 +498,31 @@ The address object updated.
 
 #### delete => /api/addresses/:id
 
-Description: deletes an address
+* Description: deletes an address
 
-Request params:
+* Request params:
 
 | param name  | type    | param type   |
 | ----------- |:-------:| ------------:|
 | id          | Number  | querystring  |
 
-Response:
+* Response:
 
 A string confirming that the address has been deleted.
 
+***
 
 ### types endpoint:
 
 #### post => api/types/all
 
-Description: returns an array of types
+* Description: returns an array of types
 
-Request params:
+* Request params:
 
 None
 
-Response:
+* Response:
 
 An array of type objects.
 
@@ -528,15 +535,15 @@ An array of type objects.
 
 #### get => /api/types/:id
 
-Description: return a type object for a provided type id
+* Description: return a type object for a provided type id
 
-Request params:
+* Request params:
 
 | param name  | type    | param type   |
 | ----------- |:-------:| ------------:|
 | id          | Numeric | Querystring  |
 
-Response:
+* Response:
 
 A type object.
 
@@ -549,9 +556,9 @@ A type object.
 
 #### post => /api/types/
 
-Description: creates a type
+* Description: creates a type
 
-Request params:
+* Request params:
 
 | param name  | type    | param type   |
 | ----------- |:-------:| ------------:|
@@ -559,7 +566,7 @@ Request params:
 | description | String  | body         |
 
 
-Response:
+* Response:
 
 The type object created.
 
@@ -572,9 +579,9 @@ The type object created.
 
 #### put => /api/types/:id
 
-Description: updates a type
+* Description: updates a type
 
-Request params:
+* Request params:
 
 | param name  | type    | param type   |
 | ----------- |:-------:| ------------:|
@@ -583,7 +590,7 @@ Request params:
 | description | String  | body         |
 
 
-Response:
+* Response:
 
 The type object updated.
 
@@ -596,15 +603,15 @@ The type object updated.
 
 #### delete => /api/types/:id
 
-Description: deletes a type
+* Description: deletes a type
 
-Request params:
+* Request params:
 
 | param name  | type    | param type   |
 | ----------- |:-------:| ------------:|
 | id          | Number | querystring  |
 
-Response:
+* Response:
 
 A string confirming that the type object has been deleted.
 
