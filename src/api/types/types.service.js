@@ -109,9 +109,7 @@ const TypesService = {
      * @param {function} next 
      */
     getAll(req, res, next) {
-        try {
-            const { id } = req.params;
-
+        try {            
             return db
                     .select('*')
                     .from(typesTable)
