@@ -22,15 +22,15 @@ const insertTestData = () => {
     });
 };
 
-describe('GET /api/types/all', () => {
+describe('POST /api/types/all', () => {
     
     insertTestData();
 
-    it('GET /api/types/all => getAll() => responds with the a list of the available types', () => {
+    it('POST /api/types/all => getAll() => responds with the a list of the available types', () => {
         const types = generateTypesTestData();
         
         return supertest(app)
-                .get('/api/types/all')
+                .post('/api/types/all')
                 .set('Authorization', `Bearer ${process.env.API_KEY}`)
                 .expect(200)
                 .expect( res => {
@@ -64,11 +64,11 @@ describe('POST /api/types', () => {
     });
 });
 
-describe('POST /api/types/:id', () => {
+describe('GET /api/types/:id', () => {
 
     insertTestData();
     
-    it('POST /api/types => getById() => gets a type for the provided type id, responding with 201 and the new type', () => {
+    it('GET /api/types => getById() => gets a type for the provided type id, responding with 201 and the new type', () => {
         const type = { 
             id: 4, 
             name: 'Groceries', 
@@ -76,7 +76,7 @@ describe('POST /api/types/:id', () => {
         };
         
         return supertest(app)
-                .post(`/api/types/${type.id}`)
+                .get(`/api/types/${type.id}`)
                 .set('Authorization', `Bearer ${process.env.API_KEY}`)
                 .send(type)
                 .expect(200)
@@ -89,11 +89,11 @@ describe('POST /api/types/:id', () => {
                 });
     });
 
-    it('POST /api/types => getById() => responds with 404 and "The type doesn\'t exist" when id is incorrect', () => {
+    it('GET /api/types => getById() => responds with 404 and "The type doesn\'t exist" when id is incorrect', () => {
         const type = { id:"456" };
         
         return supertest(app)
-                .post(`/api/types/${type.id}`)
+                .get(`/api/types/${type.id}`)
                 .set('Authorization', `Bearer ${process.env.API_KEY}`)
                 .send(type)
                 .expect( res => {

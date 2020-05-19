@@ -25,7 +25,7 @@ typesRouter
 //route for types/all
 typesRouter
         .route('/all')
-        .get(TypesService.getAll) //get all the types
+        .post(TypesService.getAll) //get all the types
 
 
 module.exports = typesRouter;
