@@ -14,7 +14,7 @@ VALUES
   ('HVAC/Heat Pump', 'Cooling and Heating service providers'), 
   ('Plumbing', 'Plumbing service providers'), 
   ('Landscaping', 'Landscaping service providers'), 
-  ('Extraordinary expense', 'Extraordianry expenses, in value or type, service providers'), 
+  ('Extraordinary', 'Extraordinary expenses, in value or type, service providers'), 
   ('Other', 'Expense types or service providers that cannot be catalogued in the previous types');
 
 
