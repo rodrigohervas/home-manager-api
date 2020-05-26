@@ -59,16 +59,16 @@ VALUES
 
 INSERT INTO serviceproviders (user_id, type_id, name, description, telephone, email, address_id) 
 VALUES
-    (1, 4, 'Nunc Incorporated', 'mauris id sapien. Cras dolor dolor, tempus non, lacinia at.', '669624543', 'consectetuer@sitamet.org', 1),
+    (1, 1, 'Nunc Incorporated', 'mauris id sapien. Cras dolor dolor, tempus non, lacinia at.', '669624543', 'consectetuer@sitamet.org', 1),
     (1, 3, 'Massa Industries', 'Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh.', '471-657-7437', 'tristique.senectus.et@dolorelitpellentesque.org', 2), 
-    (1, 3, 'Maecenas Mi Company', 'Nullam suscipit, est ac facilisis facilisis, magna tellus faucibus leo,', '(731) 941-8164', 'Suspendisse@pharetranibhAliquam.co.uk', 3), 
-    (1, 8, 'Proin Ultrices Ltd', 'sem magna nec quam. Curabitur vel lectus. Cum sociis natoque', '797659695', 'iaculis@urna.edu', 4), 
-    (1, 10, 'Dolor Elit Pellentesque Incorporated', 'pretium aliquet, metus urna convallis erat, eget tincidunt dui augue', '295-163-4820', 'bibendum.fermentum@velsapien.co.uk', 5), 
-    (1, 9, 'Nulla Inc.', 'nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere', '(940) 360-2491', 'Donec@sedpedeCum.ca', 6), 
-    (1, 7, 'Non Vestibulum Nec Foundation', 'amet nulla. Donec non justo. Proin non massa non ante', '(895) 403-6921', 'mi.fringilla.mi@faucibus.edu', 7), 
-    (1, 5, 'Kloster Supermarket', 'et nunc. Quisque ornare tortor at risus. Nunc ac sem', '861852594', 'ac.facilisis@nislelementumpurus.co.uk', 8), 
-    (1, 5, 'Spanish Delicatessen Fine Foods LLC', 'Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies', '503399561', 'accumsan.convallis@felis.net', 9), 
-    (1, 3, 'Mauris Quis LLC', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur', '(203) 277-2630', 'sit.amet@enim.edu', 10);
+    (1, 2, 'Maecenas Gas', 'Nullam suscipit, est ac facilisis facilisis, magna tellus faucibus leo,', '(731) 941-8164', 'Suspendisse@pharetranibhAliquam.co.uk', 3), 
+    (1, 8, 'Proin Landscaping Ltd', 'sem magna nec quam. Curabitur vel lectus. Cum sociis natoque', '797659695', 'iaculis@urna.edu', 4), 
+    (1, 5, 'Pellentesque Insurance', 'pretium aliquet, metus urna convallis erat, eget tincidunt dui augue', '295-163-4820', 'bibendum.fermentum@velsapien.co.uk', 5), 
+    (1, 6, 'Nulla Cooling Inc.', 'nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere', '(940) 360-2491', 'Donec@sedpedeCum.ca', 6), 
+    (1, 7, 'Plumbing Nec Foundation', 'amet nulla. Donec non justo. Proin non massa non ante', '(895) 403-6921', 'mi.fringilla.mi@faucibus.edu', 7), 
+    (1, 4, 'Kloster Supermarket', 'et nunc. Quisque ornare tortor at risus. Nunc ac sem', '861852594', 'ac.facilisis@nislelementumpurus.co.uk', 8), 
+    (1, 4, 'Delicatessen Fine Foods LLC', 'Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies', '503399561', 'accumsan.convallis@felis.net', 9), 
+    (1, 3, 'Mauris Electric LLC', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur', '(203) 277-2630', 'sit.amet@enim.edu', 10);
 
 
       --execute: psql -U [dbAdmin] -d [dbName] -f ./seeds/seed.homemanager_all_tables.sql
