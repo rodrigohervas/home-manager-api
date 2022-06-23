@@ -9,7 +9,8 @@ function errorHandler(error, req, res, next) {
             //error: { message: "server error", status: 500 }
             error: { message: error.message, status: error.status }
         }
-        console.log("======> ERROR: ", error)
+        //Log in Server console the Production error
+        console.log("Managed Error in error-handler.js: ", error)
     }
     else {
         logger.error(error)
