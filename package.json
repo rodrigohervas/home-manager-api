@@ -16,15 +16,19 @@
   "author": "Rodrigo Hervas",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^5.0.1",
+=======
+    "bcrypt": "^5.0.0",
+>>>>>>> 3aa8ced8324a7f2008cafa0d0205464c4bd9e9b2
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
     "knex": "^0.21.1",
-    "lodash": "^4.17.19",
-    "minimist": "^1.2.5",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.6",
     "morgan": "^1.9.1",
     "pg": "^8.7.3",
     "winston": "^3.2.1",
