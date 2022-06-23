@@ -9,6 +9,7 @@ function errorHandler(error, req, res, next) {
             //error: { message: "server error", status: 500 }
             error: { message: error.message, status: error.status }
         }
+        console.log("======> ERROR: ", error)
     }
     else {
         logger.error(error)
