@@ -8,10 +8,7 @@ module.exports = {
     "connectionString": process.env.NODE_ENV === 'test' 
                         ? process.env.TEST_DATABASE_URL 
                         : process.env.DATABASE_URL, 
-    "ssl": !process.env.SSL,
-    // ssl: {
-    //     required: true,
-    //     rejectUnauthorized: false
-    //}
+    //"ssl": !!process.env.SSL,
+    "ssl": process.env.SSL,
 }
-console.log("Process.env.SSL: ", !process.env.SSL)
+console.log("Process.env.SSL: ", process.env.SSL)
