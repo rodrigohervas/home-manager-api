@@ -7,9 +7,7 @@ const config = require('./config');
 const db = knex({
     client: 'pg', 
     connection: (config.NODE_ENV === 'test') ? config.TEST_DATABASE_URL : config.DATABASE_URL, 
-    ssl: {
-        rejectUnauthorized: false
-    }
+    ssl: false
 });
 
 module.exports = db;
